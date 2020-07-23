@@ -1,0 +1,40 @@
+<script>
+
+/*
+Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 5) и вернуть полученное значение (использовать switch).
+*/
+
+function sum(a, b){
+    return a + b + " - сумма";
+}
+    
+function difference(a, b){
+    return a - b + " - разность";
+}
+    
+function division(a, b){
+    return (a / b).toFixed(2) + " - деление";
+}
+    
+function multi(a, b){
+    return a * b + " - произведение";
+}
+    
+function mathOperation(arg1, arg2, operation) {
+    switch (operation) {
+        case 'sum':
+            return sum(arg1, arg2);
+        case 'difference':
+           return difference(arg1, arg2);
+        case 'division':
+            return division(arg1, arg2);
+        case 'multi':
+            return multi(arg1, arg2);
+        default:
+            return 'Ошибка!';
+    }
+}
+    
+alert(mathOperation(10, 3, "division"));
+
+</script>
